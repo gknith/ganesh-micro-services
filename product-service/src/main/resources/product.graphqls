@@ -1,0 +1,22 @@
+type Query {
+    getProductById(id: ID!) : Product
+    getProductList : [Product]
+}
+
+
+type Mutation {
+    registerProduct(name: String!, category: String!, price: Float!):Product!
+    deregisterProduct(id: ID!): Boolean
+    renameProduct(id: ID!, name: String!):Product!
+    setPrice(id: ID!, price: Float!):Boolean!
+    increasePrice(id: ID!, price: Float!):Boolean!
+    decreasePrice(id: ID!, price: Float!):Boolean!
+}
+
+type Product {
+    id: ID!
+    name: String!
+    category: String!
+    price: Float!
+}
+

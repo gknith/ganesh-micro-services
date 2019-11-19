@@ -1,0 +1,10 @@
+type Query {
+    getPriceHistory(productId: ID!) : [Price!]!
+}
+
+type Price {
+    id: ID!
+    productId:ID!
+    price: Float!
+}
+
